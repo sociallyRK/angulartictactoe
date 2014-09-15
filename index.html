@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+    <script src="controller.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body ng-app="gamesApp">
+    <center><div ng-controller="gamesCtrl">
+      <h1 class="title">Tic Tac Toe</h1>
+      <table border="1" style="width: 400px; height: 400px; table-layout:fixed;">
+        <tbody>
+          <tr>
+            <td ng-click="addMove('pos1')" ng-class="{image1: board['pos1'] === 'O', image2: board['pos1'] === 'X'}"></td>
+            <td ng-click="addMove('pos2')" ng-class="{image1: board['pos2'] === 'O', image2: board['pos2'] === 'X'}"></td>
+            <td ng-click="addMove('pos3')" ng-class="{image1: board['pos3'] === 'O', image2: board['pos3'] === 'X'}"></td>
+          </tr>
+          <tr>
+            <td ng-click="addMove('pos4')" ng-class="{image1: board['pos4'] === 'O', image2: board['pos4'] === 'X'}"></td>
+            <td ng-click="addMove('pos5')" ng-class="{image1: board['pos5'] === 'O', image2: board['pos5'] === 'X'}"></td>
+            <td ng-click="addMove('pos6')" ng-class="{image1: board['pos6'] === 'O', image2: board['pos6'] === 'X'}"></td>
+          </tr>
+          <tr>
+            <td ng-click="addMove('pos7')" ng-class="{image1: board['pos7'] === 'O', image2: board['pos7'] === 'X'}"></td>
+            <td ng-click="addMove('pos8')" ng-class="{image1: board['pos8'] === 'O', image2: board['pos8'] === 'X'}"></td>
+            <td ng-click="addMove('pos9')" ng-class="{image1: board['pos9'] === 'O', image2: board['pos9'] === 'X'}"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="players" ng-show="board.winner === false">
+        Player {{board.player}}, it's your move!
+      </div>
+      <div class="players" ng-show="board.winner != false">
+        Player {{board.player}} wins!
+      </div>
+      <div class="newgame">
+        <button class="btn btn-default" ng-click="resetGame()">Reset Game</button>
+      </div>
+    </div></center>
+  </body>
+</html>

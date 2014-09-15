@@ -1,0 +1,29 @@
+.image1 {
+  background-image: url('http://i.imgur.com/ncUD4wr.png');
+  background-size: 115px 110px;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 10px;
+  top: 7px;
+}
+
+.image2 {
+  background-image: url('http://i.imgur.com/SN4SGiR.png');
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+.players {
+  position: relative; 
+  top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.newgame {
+  position: relative;
+  top: 10px;
+}
